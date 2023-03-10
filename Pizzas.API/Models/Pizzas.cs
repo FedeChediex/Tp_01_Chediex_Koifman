@@ -6,10 +6,10 @@ using System.Collections.Generic;
 namespace Pizzas.API.Models
 {
 
-    public class Pizzas
+    public class Pizza
     {
-        private string _nombre;
-        private string _descripcion;
+        private string? _nombre;
+        private string? _descripcion;
 
         private bool _libreGluten;
         private float _importe;

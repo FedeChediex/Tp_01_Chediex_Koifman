@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Tp_01_Chediex_Koifman.Models;
+using Pizzas.API.Models;
 
 namespace Pizzas.Api.Controllers;
 
@@ -10,23 +10,29 @@ public class PizzasController : ControllerBase
 {
     [HttpGet]
     public IActionResult GetAll(){
-        
+        List<Pizza> listaPizzas= BD.GetAll();
+        return Ok(listaPizzas);
     }
     [HttpGet("{id}")]
 public IActionResult GetById(int id){
-
+    Pizza pizza = BD.GetById(id);
+    return Ok(pizza);
 }
 [HttpPost]
-public IActionResult Create(Pizza pizza){
 
+public IActionResult CreatePizza( string nombre, string descripcion, bool libregluten, float importe ){
+    BD.CreatePizza(nombre,descripcion, libregluten,  importe);
+    return Ok();
 }
 [HttpPut("{id}")]
-public IActionResult Update(int id, Pizza pizza){
-
+public IActionResult Update(int id, string nombre, string descripcion, bool libregluten, float importe){
+ BD.UpdatePizza(id, nombre,descripcion, libregluten,  importe);
+    return Ok();
 }
 [HttpDelete("{id}")]
 public IActionResult DeleteById(int id){
-
+    BD.DeletePizza(id);
+    return Ok();
 }
 
 }
