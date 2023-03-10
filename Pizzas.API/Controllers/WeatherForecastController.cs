@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Tp_01_Chediex_Koifman.Models;
 
-namespace Tp_01_Chediex_Koifman.Controllers;
+namespace Pizzas.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]

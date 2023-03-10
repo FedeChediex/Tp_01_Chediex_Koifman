@@ -3,7 +3,7 @@ using System.Data.SqlClient;
 using Dapper;
 using System.Collections.Generic;
 
-namespace Tp_01_Chediex_Koifman.Models;
+namespace Pizzas.API.Models
 {
 
     public class Pizzas
