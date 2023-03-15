@@ -8,12 +8,19 @@ namespace Pizzas.API.Models
 
     public class Pizza
     {
+        private int _id;
         private string? _nombre;
         private string? _descripcion;
 
         private bool _libreGluten;
         private float _importe;
         
+        public int Id
+        {
+            get{ return _id; }
+             set{ _id= value; }
+        }
+
         public string Nombre
         {
             get{ return _nombre; }
